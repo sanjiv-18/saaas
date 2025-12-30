@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>SaaSify</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+:root{
+    --primary:#7c5cff;
+    --primary-soft:#f2efff;
+    --bg:#ffffff;
+    --card:#ffffff;
+    --border:#e5e7eb;
+    --text:#111827;
+    --muted:#6b7280;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: "Inter", system-ui, sans-serif;
+}
+
+body{
+    background:linear-gradient(180deg,#f6f4ff,#ffffff);
+    color:var(--text);
+}
+
+/* ===== NAVBAR ===== */
+.nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:24px 80px;
+}
+
+.logo{
+    font-size:26px;
+    font-weight:700;
+    color:var(--primary);
+}
+
+.nav-links a{
+    margin:0 16px;
+    color:var(--muted);
+    text-decoration:none;
+    font-size:14px;
+}
+
+.nav button{
+    background:var(--primary);
+    color:#fff;
+    border:none;
+    padding:12px 22px;
+    border-radius:12px;
+    cursor:pointer;
+}
+
+/* ===== HERO ===== */
+.hero{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:90px 80px;
+}
+
+.hero-text{
+    max-width:520px;
+}
+
+.hero-text h1{
+    font-size:48px;
+    line-height:1.2;
+    margin-bottom:18px;
+}
+
+.hero-text span{
+    color:var(--primary);
+}
+
+.hero-text p{
+    color:var(--muted);
+    font-size:16px;
+    margin-bottom:28px;
+}
+
+.hero-buttons button{
+    padding:14px 26px;
+    border-radius:14px;
+    font-size:14px;
+    cursor:pointer;
+    margin-right:12px;
+}
+
+.primary-btn{
+    background:var(--primary);
+    color:#fff;
+    border:none;
+}
+
+.secondary-btn{
+    background:#fff;
+    border:1px solid var(--border);
+    color:var(--text);
+}
+
+/* ===== INFO CARD ===== */
+.info-box{
+    background:var(--card);
+    border:1px solid var(--border);
+    border-radius:22px;
+    padding:32px;
+    width:420px;
+    box-shadow:0 20px 40px rgba(124,92,255,0.12);
+}
+
+.info-box h3{
+    margin-bottom:18px;
+}
+
+.stat{
+    height:10px;
+    background:#eef2ff;
+    border-radius:10px;
+    margin-bottom:16px;
+    overflow:hidden;
+}
+
+.stat span{
+    display:block;
+    height:100%;
+    background:linear-gradient(90deg,#7c5cff,#a78bfa);
+}
+
+/* ===== FEATURES ===== */
+.section{
+    padding:100px 80px;
+    background:var(--primary-soft);
+}
+
+.section h2{
+    text-align:center;
+    font-size:32px;
+    margin-bottom:60px;
+}
+
+.features{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+}
+
+.card{
+    background:#fff;
+    padding:32px;
+    border-radius:20px;
+    border:1px solid var(--border);
+}
+
+.card h4{
+    margin-bottom:12px;
+    color:var(--primary);
+}
+
+.card p{
+    color:var(--muted);
+    font-size:14px;
+}
+
+/* ===== CTA ===== */
+.cta{
+    padding:100px 80px;
+    text-align:center;
+}
+
+.cta h2{
+    font-size:36px;
+    margin-bottom:10px;
+}
+
+.cta p{
+    color:var(--muted);
+    margin-bottom:30px;
+}
+
+.cta button{
+    background:var(--primary);
+    padding:16px 32px;
+    border:none;
+    border-radius:16px;
+    font-size:16px;
+    color:#fff;
+    cursor:pointer;
+}
+
+/* ===== FOOTER ===== */
+footer{
+    text-align:center;
+    padding:30px;
+    font-size:13px;
+    color:var(--muted);
+    border-top:1px solid var(--border);
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAV -->
+<div class="nav">
+    <div class="logo">SaaSify</div>
+    <div class="nav-links">
+        <a href="#">Features</a>
+        <a href="#">Pricing</a>
+        <a href="#">Docs</a>
+    </div>
+    <button>Get Started</button>
+</div>
+
+<!-- HERO -->
+<div class="hero">
+    <div class="hero-text">
+        <h1>Build Modern <span>SaaS Products</span><br>With Confidence</h1>
+        <p>
+            Launch faster with built-in authentication, billing,
+            analytics, and scalable infrastructure.
+        </p>
+        <div class="hero-buttons">
+            <button class="primary-btn">Start Free Trial</button>
+            <button class="secondary-btn">View Demo</button>
+        </div>
+    </div>
+
+    <div class="info-box">
+        <h3>Platform Insights</h3>
+        <div class="stat"><span style="width:85%"></span></div>
+        <div class="stat"><span style="width:60%"></span></div>
+        <div class="stat"><span style="width:45%"></span></div>
+    </div>
+</div>
+
+<!-- FEATURES -->
+<div class="section">
+    <h2>Everything You Need</h2>
+    <div class="features">
+        <div class="card">
+            <h4>Secure Auth</h4>
+            <p>OAuth, JWT and role-based access control.</p>
+        </div>
+        <div class="card">
+            <h4>Flexible Billing</h4>
+            <p>Subscription and usage-based pricing models.</p>
+        </div>
+        <div class="card">
+            <h4>Deep Analytics</h4>
+            <p>Understand user behavior and growth trends.</p>
+        </div>
+    </div>
+</div>
+
+<!-- CTA -->
+<div class="cta">
+    <h2>Start Building Today</h2>
+    <p>No credit card required. Deploy in minutes.</p>
+    <button>Get Started Free</button>
+</div>
+
+<!-- FOOTER -->
+<footer>
+    © 2025 SaaSify. All rights reserved.
+</footer>
+
+</body>
+</html>
